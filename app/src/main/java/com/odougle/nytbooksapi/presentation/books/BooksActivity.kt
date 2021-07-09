@@ -29,7 +29,6 @@ class BooksActivity : BaseActivity() {
                     setHasFixedSize(true)
                     adapter = BooksAdapter(books)
                 }
-
             }
         })
 
@@ -37,28 +36,4 @@ class BooksActivity : BaseActivity() {
 
     }
 
-    fun getFakeListBooks(): List<Book>{
-        return listOf(
-            Book(
-                "Title 1",
-                "Author 1",
-                "bla"
-            ),
-            Book(
-                "Title 2",
-                "Author 2",
-                "bla"
-            ),
-            Book(
-                "Title 3",
-                "Author 3",
-                "bla"
-            ),
-            Book(
-                "Title 4",
-                "Author 4",
-                "bla"
-            )
-            )
-    }
 }

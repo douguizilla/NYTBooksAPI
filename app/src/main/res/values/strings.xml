@@ -4,5 +4,8 @@
     <!--Books Activity-->
     <string name="books_title">Books</string>
 
+    <!-- Details Activity-->
+    <string name="books_details_title">Book Details</string>
+
 
 </resources>
