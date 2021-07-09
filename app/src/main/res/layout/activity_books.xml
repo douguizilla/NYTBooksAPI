@@ -5,9 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".books.BookActivity">
+    tools:context=".books.BooksActivity">
 
     <include layout="@layout/include_toolbar"/>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_books_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"/>
 
 </LinearLayout>
