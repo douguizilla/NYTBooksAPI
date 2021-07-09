@@ -1,6 +1,7 @@
 package com.odougle.nytbooksapi.presentation.books
 
 import android.os.Bundle
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.odougle.nytbooksapi.R
@@ -16,6 +17,9 @@ class BooksActivity : BaseActivity() {
 
         //set toolbar
         setupToolbar(toolbarmain, R.string.books_title)
+
+        //set viewModel
+        val viewModel: BooksViewModel = ViewModelProvider(this).get(BooksViewModel::class.java)
 
         //set recyclerview
         with(recycler_books_list){
