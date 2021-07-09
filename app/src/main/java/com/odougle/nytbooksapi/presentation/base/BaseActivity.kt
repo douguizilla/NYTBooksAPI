@@ -1,4 +1,4 @@
-package com.odougle.nytbooksapi.base
+package com.odougle.nytbooksapi.presentation.base
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar

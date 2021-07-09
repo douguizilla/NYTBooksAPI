@@ -1,4 +1,4 @@
-package com.odougle.nytbooksapi.books
+package com.odougle.nytbooksapi.presentation.books
 
 import android.view.LayoutInflater
 import android.view.View

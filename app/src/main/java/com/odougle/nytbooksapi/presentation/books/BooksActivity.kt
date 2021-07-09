@@ -1,10 +1,10 @@
-package com.odougle.nytbooksapi.books
+package com.odougle.nytbooksapi.presentation.books
 
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.odougle.nytbooksapi.R
-import com.odougle.nytbooksapi.base.BaseActivity
+import com.odougle.nytbooksapi.presentation.base.BaseActivity
 import com.odougle.nytbooksapi.data.Book
 import kotlinx.android.synthetic.main.activity_books.*
 import kotlinx.android.synthetic.main.include_toolbar.*
