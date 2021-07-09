@@ -10,5 +10,5 @@ data class BookDetailsResponse (
     @Json(name = "author")
     val author: String,
     @Json(name = "description")
-    val description: String,
+    val description: String
 )

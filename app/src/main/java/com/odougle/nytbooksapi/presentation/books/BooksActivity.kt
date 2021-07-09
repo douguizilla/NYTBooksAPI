@@ -22,12 +22,18 @@ class BooksActivity : BaseActivity() {
         val viewModel: BooksViewModel = ViewModelProvider(this).get(BooksViewModel::class.java)
 
         //set recyclerview
-        with(recycler_books_list){
-            layoutManager = LinearLayoutManager(this@BooksActivity, RecyclerView.VERTICAL, false)
-            setHasFixedSize(true)
-            adapter = BooksAdapter(getFakeListBooks())
-        }
+        viewModel.booksLiveData.observe(this, {
+            it?.let { books ->
+                with(recycler_books_list){
+                    layoutManager = LinearLayoutManager(this@BooksActivity, RecyclerView.VERTICAL, false)
+                    setHasFixedSize(true)
+                    adapter = BooksAdapter(books)
+                }
 
+            }
+        })
+
+        viewModel.getBooks()
 
     }
 
