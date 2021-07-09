@@ -5,6 +5,8 @@ plugins {
 
 }
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
@@ -34,6 +36,10 @@ android {
     }
 }
 
+ext{
+    retrofit2Version = "2.6.0"
+}
+
 dependencies {
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
@@ -43,6 +49,12 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
 
     implementation 'com.google.android.material:material:1.4.0'
+
+    implementation "com.squareup.retrofit2:retrofit:$retrofit2Version"
+    implementation "com.squareup.retrofit2:converter-moshi:$retrofit2Version"
+    implementation 'com.squareup.moshi:moshi:1.9.3'
+
+    kapt("com.squareup.moshi:moshi-kotlin-codegen:1.12.0")
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
