@@ -5,7 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.odougle.nytbooksapi.R
 import com.odougle.nytbooksapi.presentation.base.BaseActivity
-import com.odougle.nytbooksapi.data.Book
+import com.odougle.nytbooksapi.data.model.Book
 import kotlinx.android.synthetic.main.activity_books.*
 import kotlinx.android.synthetic.main.include_toolbar.*
 

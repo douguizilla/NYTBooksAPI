@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.odougle.nytbooksapi.R
-import com.odougle.nytbooksapi.data.Book
+import com.odougle.nytbooksapi.data.model.Book
 import kotlinx.android.synthetic.main.item_book.view.*
 
 class BooksAdapter(
