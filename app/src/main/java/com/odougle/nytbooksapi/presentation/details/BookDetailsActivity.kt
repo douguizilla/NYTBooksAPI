@@ -14,7 +14,7 @@ class BookDetailsActivity : BaseActivity() {
         setContentView(R.layout.activity_book_details)
 
         //set toolbar
-        setupToolbar(toolbarmain,R.string.books_details_title)
+        setupToolbar(toolbarmain,R.string.books_details_title, true)
 
         //set views
         val title = intent.getStringExtra(EXTRA_TITLE)
