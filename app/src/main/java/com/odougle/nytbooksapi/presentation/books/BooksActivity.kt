@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.odougle.nytbooksapi.R
 import com.odougle.nytbooksapi.presentation.base.BaseActivity
-import com.odougle.nytbooksapi.data.model.Book
+import com.odougle.nytbooksapi.presentation.details.BookDetailsActivity
 import kotlinx.android.synthetic.main.activity_books.*
 import kotlinx.android.synthetic.main.include_toolbar.*
 
@@ -27,7 +27,14 @@ class BooksActivity : BaseActivity() {
                 with(recycler_books_list){
                     layoutManager = LinearLayoutManager(this@BooksActivity, RecyclerView.VERTICAL, false)
                     setHasFixedSize(true)
-                    adapter = BooksAdapter(books)
+                    adapter = BooksAdapter(books){ book ->
+                        val intent = BookDetailsActivity.getStartIntent(
+                            this@BooksActivity,
+                            book.title,
+                            book.description
+                        )
+                        this@BooksActivity.startActivity(intent)
+                    }
                 }
             }
         })
