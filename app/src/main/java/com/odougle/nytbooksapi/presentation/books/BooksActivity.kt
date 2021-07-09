@@ -24,7 +24,7 @@ class BooksActivity : BaseActivity() {
             adapter = BooksAdapter(getFakeListBooks())
         }
 
-
+        
     }
 
     fun getFakeListBooks(): List<Book>{
