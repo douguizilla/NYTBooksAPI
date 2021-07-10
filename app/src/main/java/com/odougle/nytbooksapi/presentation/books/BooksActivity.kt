@@ -1,6 +1,7 @@
 package com.odougle.nytbooksapi.presentation.books
 
 import android.os.Bundle
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -24,10 +25,11 @@ class BooksActivity : BaseActivity() {
         //set recyclerview
         viewModel.booksLiveData.observe(this, {
             it?.let { books ->
-                with(recycler_books_list){
-                    layoutManager = LinearLayoutManager(this@BooksActivity, RecyclerView.VERTICAL, false)
+                with(recycler_books_list) {
+                    layoutManager =
+                        LinearLayoutManager(this@BooksActivity, RecyclerView.VERTICAL, false)
                     setHasFixedSize(true)
-                    adapter = BooksAdapter(books){ book ->
+                    adapter = BooksAdapter(books) { book ->
                         val intent = BookDetailsActivity.getStartIntent(
                             this@BooksActivity,
                             book.title,
@@ -35,6 +37,16 @@ class BooksActivity : BaseActivity() {
                         )
                         this@BooksActivity.startActivity(intent)
                     }
+                }
+            }
+        })
+
+        //set viewflipper to show up one child
+        viewModel.viewFlipperLiveData.observe(this, Observer {
+            it?.let { viewFlipper ->
+                viewFlipperBooks.displayedChild = viewFlipper.first
+                viewFlipper.second?.let { errorMessageResID ->
+                    textViewError.text = getString(errorMessageResID)
                 }
             }
         })
