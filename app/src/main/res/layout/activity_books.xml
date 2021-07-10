@@ -34,10 +34,11 @@
             tools:listitem="@layout/item_book"/>
 
         <TextView
+            android:id="@+id/textViewError"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/erro_401"/>
+            tools:text="@string/erro_401"/>
 
     </ViewFlipper>
 
