@@ -22,7 +22,6 @@
         <activity
             android:name=".presentation.details.BookDetailsActivity"
             android:parentActivityName=".presentation.books.BooksActivity" />
-
     </application>
 
 </manifest>
