@@ -1,5 +1,6 @@
 package com.odougle.nytbooksapi.data.response
 
+import com.odougle.nytbooksapi.data.model.Book
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
@@ -11,4 +12,10 @@ data class BookDetailsResponse (
     val author: String,
     @Json(name = "description")
     val description: String
-)
+){
+    fun getBookModel() = Book(
+        title = this.title,
+        author = this.author,
+        description = this.description
+    )
+}
