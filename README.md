@@ -22,4 +22,4 @@ Ao clicar sobre um dos livros, são exibidos os detalhes sobre ele
 
 Estou a disposição para novas ideias!
 
-Entre em contato comigo pelo linkedin: [Douglas Gomes](cutt.ly/dgplinkedin)
+Entre em contato comigo pelo linkedin: [Douglas Gomes](https://www.linkedin.com/in/douglasgomesdepaula/)
