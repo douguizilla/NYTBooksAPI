@@ -1,6 +1,6 @@
 # NYTBooksAPI
 
-Repositório criado com o objetivo de criar uma aplicação que consuma a API Books do New York Times para fins educativos. Nele a aplicação solicita a API uma lista de livros, lista a resposta em tela e permite que sejam abertos os detalhes sobre o livro clicado. Foram utilizados neste projeto:
+Esta aplicação consume a API Books do New York Times para fins educativos e foi desenvolvido através das aulas do canal do [Douglas Motta](https://www.youtube.com/playlist?list=PLPs3nlHFeKTrD1az_BrbIuXZi3EOfMqNv). Nele a aplicação solicita a API uma lista de livros, lista a resposta em tela e permite que sejam abertos os detalhes sobre o livro clicado. Foram utilizados neste projeto:
 
 - Clean code
 - MVVM
